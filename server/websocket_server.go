@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/cloudwebrtc/go-protoo/logger"
-	"github.com/cloudwebrtc/go-protoo/transport"
+	"github.com/gearghost/go-protoo/logger"
+	"github.com/gearghost/go-protoo/transport"
 	"github.com/gorilla/websocket"
 )
 

@@ -3,7 +3,7 @@
 ## How to test.
 ### Run go-protoo-server.
 ```
-git clone https://github.com/cloudwebrtc/go-protoo
+git clone https://github.com/gearghost/go-protoo
 cd go-protoo/examples/go
 go run server.go
 ```

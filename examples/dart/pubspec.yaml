@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   protoo_client:
-    git: https://github.com/cloudwebrtc/dart-protoo-client
+    git: https://github.com/gearghost/dart-protoo-client
 
 #dev_dependencies:
 #  pedantic: ^1.0.0

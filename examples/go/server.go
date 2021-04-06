@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/cloudwebrtc/go-protoo/logger"
-	"github.com/cloudwebrtc/go-protoo/room"
-	"github.com/cloudwebrtc/go-protoo/server"
-	"github.com/cloudwebrtc/go-protoo/transport"
+	"github.com/gearghost/go-protoo/logger"
+	"github.com/gearghost/go-protoo/room"
+	"github.com/gearghost/go-protoo/server"
+	"github.com/gearghost/go-protoo/transport"
 )
 
 func JsonEncode(str string) map[string]interface{} {
