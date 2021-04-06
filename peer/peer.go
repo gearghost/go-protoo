@@ -6,7 +6,7 @@ import (
 	"github.com/gearghost/go-protoo/logger"
 	"github.com/gearghost/go-protoo/transport"
 
-	"github.com/chuckpreslar/emission"
+	"github.com/gearghost/emission"
 )
 
 type Transcation struct {

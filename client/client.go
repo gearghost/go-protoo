@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/chuckpreslar/emission"
+	"github.com/gearghost/emission"
 	"github.com/gearghost/go-protoo/logger"
 	"github.com/gearghost/go-protoo/transport"
 	"github.com/gorilla/websocket"

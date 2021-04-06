@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/chuckpreslar/emission"
+	"github.com/gearghost/emission"
 	"github.com/gearghost/go-protoo/logger"
 	"github.com/gorilla/websocket"
 )
