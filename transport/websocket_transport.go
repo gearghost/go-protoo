@@ -4,14 +4,11 @@ import (
 	"errors"
 	"net"
 	"sync"
-	"time"
 
 	"github.com/gearghost/emission"
 	"github.com/gearghost/go-protoo/logger"
 	"github.com/gorilla/websocket"
 )
-
-const pingPeriod = 5 * time.Second
 
 type WebSocketTransport struct {
 	emission.Emitter
@@ -27,7 +24,7 @@ func NewWebSocketTransport(socket *websocket.Conn) *WebSocketTransport {
 	transport.mutex = new(sync.Mutex)
 	transport.closed = false
 	transport.socket.SetCloseHandler(func(code int, text string) error {
-		logger.Warnf("%s [%d]", text, code)
+		//logger.Warnf("%s [%d]", text, code)
 		transport.Emit("close", code, text)
 		transport.closed = true
 		return nil

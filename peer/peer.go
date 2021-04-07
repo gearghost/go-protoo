@@ -13,7 +13,6 @@ type Transcation struct {
 	id     int
 	accept AcceptFunc
 	reject RejectFunc
-	close  func()
 }
 
 type Peer struct {
@@ -68,13 +67,10 @@ func (peer *Peer) Request(method string, data map[string]interface{}, success Ac
 		id:     id,
 		accept: success,
 		reject: reject,
-		close: func() {
-			logger.Infof("Transport closed !")
-		},
 	}
 
 	peer.transcations[id] = transcation
-	logger.Infof("Send request [%s]", method)
+	//logger.Infof("Send request [%s]", method)
 	peer.transport.Send(string(str))
 }
 
@@ -89,7 +85,7 @@ func (peer *Peer) Notify(method string, data map[string]interface{}) {
 		logger.Errorf("Marshal %v", err)
 		return
 	}
-	logger.Infof("Send notification [%s]", method)
+	//logger.Infof("Send notification [%s]", method)
 	peer.transport.Send(string(str))
 }
 
@@ -127,7 +123,7 @@ func (peer *Peer) handleRequest(request map[string]interface{}) {
 			return
 		}
 		//send accept
-		logger.Infof("Accept [%s] => (%s)", request["method"], str)
+		//logger.Infof("Accept [%s] => (%s)", request["method"], str)
 		peer.transport.Send(string(str))
 	}
 
@@ -145,7 +141,7 @@ func (peer *Peer) handleRequest(request map[string]interface{}) {
 			return
 		}
 		//send reject
-		logger.Infof("Reject [%s] => (errorCode:%d, errorReason:%s)", request["method"], errorCode, errorReason)
+		//logger.Infof("Reject [%s] => (errorCode:%d, errorReason:%s)", request["method"], errorCode, errorReason)
 		peer.transport.Send(string(str))
 	}
 
